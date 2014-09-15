@@ -1,0 +1,15 @@
+{
+  "folders":
+  [
+    {
+      "path": "."
+    }
+  ],
+  "settings":
+  {
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "default_line_ending": "unix",
+    "ensure_newline_at_eof_on_save": true
+  }
+}
