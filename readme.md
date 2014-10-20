@@ -31,4 +31,14 @@ ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
   group: 'YIFY',
   name: 'Captain Russia The Summer Soldier' }
 */
+
+ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
+/*
+{ excess: [ 'HC', 'AC3' ],
+  year: '2014',
+  quality: 'HDRip',
+  codec: 'XViD',
+  group: 'juggs[ETRG]',
+  title: 'AL 288-1' }
+*/
 ```
