@@ -10,7 +10,9 @@ var patterns = {
 
 module.exports = function (name) {
   var matches,
-    parts = {},
+    parts = {
+      excess: name
+    },
     lowestIndex = 999;
 
   // finds properties
@@ -42,6 +44,16 @@ module.exports = function (name) {
   if(matches.group && matches.group.index < lowestIndex) lowestIndex = matches.group.index;
 
   parts.title = name.substr(0, lowestIndex);
+
+  // extracts excess from name
+  for(key in parts) {
+    if(key != 'excess') parts.excess = parts.excess.replace(parts[key], '');
+  }
+
+  // cleans up excess
+  parts.excess = parts.excess.replace(/^[\.-]*/, '');
+  parts.excess = parts.excess.replace(/[\.-]*$/, '').trim();
+  parts.excess = parts.excess.split(/\.\.+/);
 
   // cleans up title
   if(parts.title.indexOf(' ') === -1 && parts.title.indexOf('.') !== -1)
