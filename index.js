@@ -51,9 +51,12 @@ module.exports = function (name) {
   }
 
   // cleans up excess
-  parts.excess = parts.excess.replace(/^[\.-]*/, '');
-  parts.excess = parts.excess.replace(/[\.-]*$/, '').trim();
-  parts.excess = parts.excess.split(/\.\.+/);
+  parts.excess = parts.excess.replace(/^[-\. ]+/, '');
+  parts.excess = parts.excess.replace(/[-\. ]+$/, '');
+  parts.excess = parts.excess.replace(/[\(\)]/g, '');
+  parts.excess = parts.excess.split(/\.\.+| +/);
+
+  if(parts.excess[0] === '') delete parts.excess;
 
   // cleans up title
   if(parts.title.indexOf(' ') === -1 && parts.title.indexOf('.') !== -1)
