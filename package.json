@@ -1,4 +1,17 @@
 {
   "name": "parse-torrent-name",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "description": "Parses torrent name of a movie or TV show.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jzjzjzj/parse-torrent-name.git"
+  },
+  "homepage": "https://github.com/jzjzjzj/parse-torrent-name",
+  "bugs": {
+    "url": "https://github.com/jzjzjzj/parse-torrent-name/issues"
+  },
+  "keywords": [
+    "torrent",
+    "parse torrent name"
+  ]
 }
