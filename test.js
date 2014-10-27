@@ -15,7 +15,7 @@ var torrents = [
   {
     name: 'Hercules (2014) 1080p BrRip H264 - YIFY',
     title: 'Hercules',
-    year: '2014',
+    year: 2014,
     resolution: '1080p',
     quality: 'BrRip',
     codec: 'H264',
@@ -24,7 +24,7 @@ var torrents = [
   {
     name: 'Dawn.of.the.Planet.of.the.Apes.2014.HDRip.XViD-EVO',
     title: 'Dawn of the Planet of the Apes',
-    year: '2014',
+    year: 2014,
     quality: 'HDRip',
     codec: 'XViD',
     group: 'EVO'

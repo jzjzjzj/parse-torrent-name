@@ -28,7 +28,7 @@ module.exports = function (name) {
 
   if(matches.season) parts.season = matches.season[0];
   if(matches.episode) parts.episode = matches.episode[0];
-  if(matches.year) parts.year = matches.year[1];
+  if(matches.year) parts.year = parseInt(matches.year[1]);
   if(matches.resolution) parts.resolution = matches.resolution[0];
   if(matches.quality) parts.quality = matches.quality[0];
   if(matches.codec) parts.codec = matches.codec[0];
