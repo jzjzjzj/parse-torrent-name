@@ -1,7 +1,7 @@
 var patterns = {
   season: /[S][0-9]{2}/,
   episode: /[E][0-9]{2}/,
-  year: /\(?([12][901][0-9]{2})\)?/,
+  year: /\(?((?:19|20)[0-9]{2})\)?/,
   resolution: /[0-9]{3,4}p/,
   quality: /HDTV|HDCAM|BrRip|TS|WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|WEBRip/,
   codec: /xvid|x264|h264/i,
@@ -28,7 +28,7 @@ module.exports = function (name) {
 
   if(matches.season) parts.season = matches.season[0];
   if(matches.episode) parts.episode = matches.episode[0];
-  if(matches.year) parts.year = matches.year[1];
+  if(matches.year) parts.year = parseInt(matches.year[1]);
   if(matches.resolution) parts.resolution = matches.resolution[0];
   if(matches.quality) parts.quality = matches.quality[0];
   if(matches.codec) parts.codec = matches.codec[0];
@@ -53,7 +53,7 @@ module.exports = function (name) {
   // cleans up excess
   parts.excess = parts.excess.replace(/^[-\. ]+/, '');
   parts.excess = parts.excess.replace(/[-\. ]+$/, '');
-  parts.excess = parts.excess.replace(/[\(\)]/g, '');
+  parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
   parts.excess = parts.excess.split(/\.\.+| +/);
 
   if(parts.excess[0] === '') delete parts.excess;
