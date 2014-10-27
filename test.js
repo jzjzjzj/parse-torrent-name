@@ -69,6 +69,10 @@ var torrents = [
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
     title: 'Marvel\'s Agents of S H I E L D'
+  },
+  {
+    name: 'Guardians of the Galaxy (CamRip / 2014)',
+    excess: undefined
   }
 ];
 

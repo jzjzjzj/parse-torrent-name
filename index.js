@@ -53,7 +53,7 @@ module.exports = function (name) {
   // cleans up excess
   parts.excess = parts.excess.replace(/^[-\. ]+/, '');
   parts.excess = parts.excess.replace(/[-\. ]+$/, '');
-  parts.excess = parts.excess.replace(/[\(\)]/g, '');
+  parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
   parts.excess = parts.excess.split(/\.\.+| +/);
 
   if(parts.excess[0] === '') delete parts.excess;
