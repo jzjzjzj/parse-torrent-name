@@ -1,7 +1,7 @@
 var patterns = {
   season: /[S][0-9]{2}/,
   episode: /[E][0-9]{2}/,
-  year: /\(?([12][901][0-9]{2})\)?/,
+  year: /\(?((?:19|20)[0-9]{2})\)?/,
   resolution: /[0-9]{3,4}p/,
   quality: /HDTV|HDCAM|BrRip|TS|WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|WEBRip/,
   codec: /xvid|x264|h264/i,

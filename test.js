@@ -73,6 +73,10 @@ var torrents = [
   {
     name: 'Guardians of the Galaxy (CamRip / 2014)',
     excess: undefined
+  },
+  {
+    name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
+    year: undefined
   }
 ];
 
