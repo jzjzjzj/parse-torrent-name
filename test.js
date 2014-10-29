@@ -81,6 +81,7 @@ var torrents = [
   },
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
+    codec: 'H.264',
     year: undefined
   },
   {
