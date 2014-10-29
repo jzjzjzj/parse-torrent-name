@@ -71,6 +71,10 @@ var torrents = [
     title: 'Marvel\'s Agents of S H I E L D'
   },
   {
+    name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
+    title: 'Marvels Agents of S.H.I.E.L.D.'
+  },
+  {
     name: 'Guardians of the Galaxy (CamRip / 2014)',
     excess: undefined
   },
