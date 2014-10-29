@@ -64,6 +64,7 @@ var torrents = [
   },
   {
     name: 'Guardians Of The Galaxy 2014 R6 720p HDCAM x264-JYK',
+    region: 'R6',
     quality: 'HDCAM'
   },
   {
@@ -81,6 +82,10 @@ var torrents = [
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
     year: undefined
+  },
+  {
+    name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
+    region: 'R5'
   }
 ];
 

@@ -5,7 +5,8 @@ var patterns = {
   resolution: /[0-9]{3,4}p/,
   quality: /HDTV|HDCAM|BrRip|TS|WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|WEBRip/,
   codec: /xvid|x264|h264/i,
-  group: /- ?([^-]+)$/
+  group: /- ?([^-]+)$/,
+  region: /R[0-9]/
 };
 
 module.exports = function (name) {
@@ -23,7 +24,8 @@ module.exports = function (name) {
     resolution: name.match(patterns.resolution),
     quality: name.match(patterns.quality),
     codec: name.match(patterns.codec),
-    group: name.match(patterns.group)
+    group: name.match(patterns.group),
+    region: name.match(patterns.region)
   };
 
   if(matches.season) parts.season = matches.season[0];
@@ -33,6 +35,7 @@ module.exports = function (name) {
   if(matches.quality) parts.quality = matches.quality[0];
   if(matches.codec) parts.codec = matches.codec[0];
   if(matches.group) parts.group = matches.group[1];
+  if(matches.region) parts.region = matches.region[0];
 
   // finds title
   if(matches.season && matches.season.index < lowestIndex) lowestIndex = matches.season.index;
@@ -42,6 +45,7 @@ module.exports = function (name) {
   if(matches.quality && matches.quality.index < lowestIndex) lowestIndex = matches.quality.index;
   if(matches.codec && matches.codec.index < lowestIndex) lowestIndex = matches.codec.index;
   if(matches.group && matches.group.index < lowestIndex) lowestIndex = matches.group.index;
+  if(matches.region && matches.region.index < lowestIndex) lowestIndex = matches.region.index;
 
   parts.title = name.substr(0, lowestIndex);
 
