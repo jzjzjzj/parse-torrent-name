@@ -26,8 +26,8 @@ var ptn = require('parse-torrent-name');
 
 ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
 /*
-{ season: 'S05',
-  episode: 'E02',
+{ season: 5,
+  episode: 2,
   resolution: '720p',
   quality: 'HDTV',
   codec: 'x264',

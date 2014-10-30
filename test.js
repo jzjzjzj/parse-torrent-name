@@ -5,8 +5,8 @@ var torrents = [
   {
     name: 'The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]',
     title: 'The Walking Dead',
-    season: 'S05',
-    episode: 'E03',
+    season: 5,
+    episode: 3,
     resolution: '720p',
     quality: 'HDTV',
     codec: 'x264',
@@ -31,6 +31,8 @@ var torrents = [
   },
   {
     name: 'The Big Bang Theory S08E06 HDTV XviD-LOL [eztv]',
+    season: 8,
+    episode: 6,
     quality: 'HDTV',
     codec: 'XviD',
     group: 'LOL [eztv]'

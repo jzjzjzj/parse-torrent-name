@@ -1,6 +1,6 @@
 var patterns = {
-  season: /[S][0-9]{2}/,
-  episode: /[E][0-9]{2}/,
+  season: /[S]([0-9]{2})/,
+  episode: /[E]([0-9]{2})/,
   year: /\(?((?:19|20)[0-9]{2})\)?/,
   resolution: /[0-9]{3,4}p/,
   quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
@@ -28,8 +28,8 @@ module.exports = function (name) {
     region: name.match(patterns.region)
   };
 
-  if(matches.season) parts.season = matches.season[0];
-  if(matches.episode) parts.episode = matches.episode[0];
+  if(matches.season) parts.season = parseInt(matches.season[1]);
+  if(matches.episode) parts.episode = parseInt(matches.episode[1]);
   if(matches.year) parts.year = parseInt(matches.year[1]);
   if(matches.resolution) parts.resolution = matches.resolution[0];
   if(matches.quality) parts.quality = matches.quality[0];
