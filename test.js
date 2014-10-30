@@ -31,6 +31,7 @@ var torrents = [
   },
   {
     name: 'The Big Bang Theory S08E06 HDTV XviD-LOL [eztv]',
+    quality: 'HDTV',
     codec: 'XviD',
     group: 'LOL [eztv]'
   },
@@ -48,11 +49,12 @@ var torrents = [
   },
   {
     name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
-    quality: 'WEB-DL'
+    quality: 'PPV WEB-DL'
   },
   {
     name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
-    quality: 'HDTV'
+    title: 'UFC 179',
+    quality: 'PPV.HDTV'
   },
   {
     name: 'Marvels Agents of S H I E L D S02E05 HDTV x264-KILLERS [eztv]',
@@ -87,6 +89,14 @@ var torrents = [
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
     region: 'R5'
+  },
+  {
+    name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
+    quality: 'BRRip'
+  },
+  {
+    name: 'These.Final.Hours.2013.WBBRip XViD',
+    quality: 'WBBRip'
   }
 ];
 
