@@ -12,6 +12,7 @@ var torrents = [
     codec: 'x264',
     group: 'ASAP[ettv]',
     extended: undefined,
+    hardcoded: undefined,
     excess: undefined
   },
   {
@@ -114,6 +115,15 @@ var torrents = [
     title: 'Downton Abbey',
     season: 5,
     episode: 6,
+    excess: undefined
+  },
+  {
+    name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
+    hardcoded: true
+  },
+  {
+    name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
+    hardcoded: true,
     excess: undefined
   }
 ];
