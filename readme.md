@@ -7,6 +7,7 @@ Parses torrent name of a movie or TV show.
 - codec
 - episode
 - excess
+- extended
 - group
 - quality
 - region

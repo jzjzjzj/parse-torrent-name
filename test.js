@@ -11,6 +11,7 @@ var torrents = [
     quality: 'HDTV',
     codec: 'x264',
     group: 'ASAP[ettv]',
+    extended: undefined,
     excess: undefined
   },
   {
@@ -45,7 +46,13 @@ var torrents = [
   },
   {
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
+    extended: true,
     quality: 'WEB-DL'
+  },
+  {
+    name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',
+    extended: true,
+    excess: undefined
   },
   {
     name: 'Hercules (2014) WEBDL DVDRip XviD-MAX',

@@ -6,7 +6,8 @@ var patterns = {
   quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
   codec: /xvid|x264|h\.?264/i,
   group: /- ?([^-]+)$/,
-  region: /R[0-9]/
+  region: /R[0-9]/,
+  extended: /EXTENDED/
 };
 
 module.exports = function (name) {
@@ -25,7 +26,8 @@ module.exports = function (name) {
     quality: name.match(patterns.quality),
     codec: name.match(patterns.codec),
     group: name.match(patterns.group),
-    region: name.match(patterns.region)
+    region: name.match(patterns.region),
+    extended: name.match(patterns.extended)
   };
 
   if(matches.season) parts.season = parseInt(matches.season[1]);
@@ -36,6 +38,7 @@ module.exports = function (name) {
   if(matches.codec) parts.codec = matches.codec[0];
   if(matches.group) parts.group = matches.group[1];
   if(matches.region) parts.region = matches.region[0];
+  if(matches.extended) parts.extended = true;
 
   // finds title
   if(matches.season && matches.season.index < lowestIndex) lowestIndex = matches.season.index;
@@ -46,6 +49,7 @@ module.exports = function (name) {
   if(matches.codec && matches.codec.index < lowestIndex) lowestIndex = matches.codec.index;
   if(matches.group && matches.group.index < lowestIndex) lowestIndex = matches.group.index;
   if(matches.region && matches.region.index < lowestIndex) lowestIndex = matches.region.index;
+  if(matches.extended && matches.extended.index < lowestIndex) lowestIndex = matches.extended.index;
 
   parts.title = name.substr(0, lowestIndex);
 
@@ -59,6 +63,7 @@ module.exports = function (name) {
   parts.excess = parts.excess.replace(/[-\. ]+$/, '');
   parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
   parts.excess = parts.excess.replace(/(?:S0E0)|(?:x0)/, '');
+  parts.excess = parts.excess.replace(/EXTENDED/, '');
   parts.excess = parts.excess.split(/\.\.+| +/);
 
   if(parts.excess[0] === '') delete parts.excess;
