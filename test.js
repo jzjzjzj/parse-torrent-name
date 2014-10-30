@@ -137,9 +137,9 @@ torrents.forEach(function(torrent) {
     for(key in torrent) {
       if(key === 'name') continue;
 
-      testMessage = key + ' should be "' + torrent[key] + '"';
+      testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
 
-      test.equal(
+      test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
         ptn(torrent.name)[key],
         torrent[key],
         testMessage
