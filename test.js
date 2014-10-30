@@ -10,7 +10,8 @@ var torrents = [
     resolution: '720p',
     quality: 'HDTV',
     codec: 'x264',
-    group: 'ASAP[ettv]'
+    group: 'ASAP[ettv]',
+    excess: undefined
   },
   {
     name: 'Hercules (2014) 1080p BrRip H264 - YIFY',
@@ -39,7 +40,8 @@ var torrents = [
   },
   {
     name: '22 Jump Street (2014) 720p BrRip x264 - YIFY',
-    title: '22 Jump Street'
+    title: '22 Jump Street',
+    episode: undefined
   },
   {
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
@@ -99,6 +101,13 @@ var torrents = [
   {
     name: 'These.Final.Hours.2013.WBBRip XViD',
     quality: 'WBBRip'
+  },
+  {
+    name: 'Downton Abbey 5x06 HDTV x264-FoV [eztv]',
+    title: 'Downton Abbey',
+    season: 5,
+    episode: 6,
+    excess: undefined
   }
 ];
 
