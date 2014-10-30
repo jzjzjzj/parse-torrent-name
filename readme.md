@@ -1,13 +1,13 @@
-## parse-torrent-name [![Build Status](https://travis-ci.org/jzjzjzj/parse-torrent-name.svg?branch=master)](https://travis-ci.org/jzjzjzj/parse-torrent-name)
+# parse-torrent-name [![Build Status](https://travis-ci.org/jzjzjzj/parse-torrent-name.svg?branch=master)](https://travis-ci.org/jzjzjzj/parse-torrent-name)
 
 Parses torrent name of a movie or TV show.
 
-# Install:
+## Install:
 ```bash
 $ npm install parse-torrent-name
 ```
 
-# Usage:
+## Usage:
 ```javascript
 var ptn = require('parse-torrent-name');
 
