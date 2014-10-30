@@ -48,7 +48,7 @@ var torrents = [
   },
   {
     name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
-    quality: 'WEB-DL'
+    quality: 'PPV WEB-DL'
   },
   {
     name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
