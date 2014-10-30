@@ -31,6 +31,7 @@ var torrents = [
   },
   {
     name: 'The Big Bang Theory S08E06 HDTV XviD-LOL [eztv]',
+    quality: 'HDTV',
     codec: 'XviD',
     group: 'LOL [eztv]'
   },
@@ -52,7 +53,8 @@ var torrents = [
   },
   {
     name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
-    quality: 'HDTV'
+    title: 'UFC 179',
+    quality: 'PPV.HDTV'
   },
   {
     name: 'Marvels Agents of S H I E L D S02E05 HDTV x264-KILLERS [eztv]',

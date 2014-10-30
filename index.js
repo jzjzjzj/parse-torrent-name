@@ -3,7 +3,7 @@ var patterns = {
   episode: /[E][0-9]{2}/,
   year: /\(?((?:19|20)[0-9]{2})\)?/,
   resolution: /[0-9]{3,4}p/,
-  quality: /HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
+  quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
   codec: /xvid|x264|h\.?264/i,
   group: /- ?([^-]+)$/,
   region: /R[0-9]/
