@@ -5,7 +5,7 @@ var patterns = {
   resolution: /[0-9]{3,4}p/,
   quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
   codec: /xvid|x264|h\.?264/i,
-  group: /- ?([^-]+)$/,
+  group: /- ?([^-]+(?:-[^-]+-$)?)$/,
   region: /R[0-9]/,
   extended: /EXTENDED/,
   hardcoded: /HC/
