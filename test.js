@@ -57,7 +57,8 @@ var torrents = [
   },
   {
     name: 'Hercules (2014) WEBDL DVDRip XviD-MAX',
-    quality: 'DVDRip'
+    quality: 'DVDRip',
+    excess: ['WEBDL']
   },
   {
     name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
@@ -121,7 +122,8 @@ var torrents = [
   },
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
-    hardcoded: true
+    hardcoded: true,
+    excess: ['AC3']
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',

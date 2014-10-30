@@ -68,9 +68,9 @@ module.exports = function (name) {
   parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
   parts.excess = parts.excess.replace(/(?:S0E0)|(?:x0)/, '');
   parts.excess = parts.excess.replace(/EXTENDED|HC/g, '');
-  parts.excess = parts.excess.split(/\.\.+| +/);
+  parts.excess = parts.excess.split(/\.\.+| +/).filter(Boolean);
 
-  if(parts.excess[0] === '') delete parts.excess;
+  if(parts.excess.length === 0) delete parts.excess;
 
   // cleans up title
   if(parts.title.indexOf(' ') === -1 && parts.title.indexOf('.') !== -1)
