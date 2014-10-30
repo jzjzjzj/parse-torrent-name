@@ -2,6 +2,19 @@
 
 Parses torrent name of a movie or TV show.
 
+**Possible parts extracted:**
+
+- codec
+- episode
+- excess
+- group
+- quality
+- region
+- resolution
+- season
+- title
+- year
+
 ## Install:
 ```bash
 $ npm install parse-torrent-name
