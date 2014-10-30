@@ -13,6 +13,7 @@ var patterns = {
 
 module.exports = function (name) {
   var matches,
+    target,
     parts = {
       excess: name
     },
@@ -59,7 +60,9 @@ module.exports = function (name) {
 
   // extracts excess from name
   for(key in parts) {
-    if(key != 'excess') parts.excess = parts.excess.replace(parts[key], '');
+    target = parts[key];
+
+    if(key !== 'excess') parts.excess = parts.excess.replace(target, '');
   }
 
   // cleans up excess
