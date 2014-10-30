@@ -87,6 +87,10 @@ var torrents = [
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
     region: 'R5'
+  },
+  {
+    name: 'These.Final.Hours.2013.WBBRip XViD',
+    quality: 'WBBRip'
   }
 ];
 
