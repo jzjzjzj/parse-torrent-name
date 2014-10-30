@@ -13,6 +13,7 @@ var patterns = {
 
 module.exports = function (name) {
   var matches,
+    target,
     parts = {
       excess: name
     },
@@ -59,14 +60,17 @@ module.exports = function (name) {
 
   // extracts excess from name
   for(key in parts) {
-    if(key != 'excess') parts.excess = parts.excess.replace(parts[key], '');
+    if(key === 'season') target = matches.season[0];
+    else if(key === 'episode') target = matches.episode[0].substr(1);
+    else target = parts[key];
+
+    if(key !== 'excess') parts.excess = parts.excess.replace(target, '');
   }
 
   // cleans up excess
   parts.excess = parts.excess.replace(/^[-\. ]+/, '');
   parts.excess = parts.excess.replace(/[-\. ]+$/, '');
   parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
-  parts.excess = parts.excess.replace(/(?:S0E0)|(?:x0)/, '');
   parts.excess = parts.excess.replace(/EXTENDED|HC/g, '');
   parts.excess = parts.excess.split(/\.\.+| +/).filter(Boolean);
 

@@ -129,6 +129,22 @@ var torrents = [
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
     hardcoded: true,
     excess: undefined
+  },
+  {
+    name: 'The Flash 2014 S01E04 HDTV x264-FUM[ettv]',
+    excess: undefined
+  },
+  {
+    name: 'South Park S18E05 HDTV x264-KILLERS [eztv]',
+    excess: undefined
+  },
+  {
+    name: 'The Flash 2014 S01E03 HDTV x264-LOL[ettv]',
+    excess: undefined
+  },
+  {
+    name: 'The Flash 2014 S01E01 HDTV x264-LOL[ettv]',
+    excess: undefined
   }
 ];
 
