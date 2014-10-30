@@ -89,6 +89,10 @@ var torrents = [
     region: 'R5'
   },
   {
+    name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
+    quality: 'BRRip'
+  },
+  {
     name: 'These.Final.Hours.2013.WBBRip XViD',
     quality: 'WBBRip'
   }
