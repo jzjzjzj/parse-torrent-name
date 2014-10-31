@@ -13,6 +13,7 @@ var patterns = {
 
 module.exports = function (name) {
   var matches,
+    key,
     target,
     parts = {
       excess: name
