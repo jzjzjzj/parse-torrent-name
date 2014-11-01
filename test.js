@@ -145,6 +145,10 @@ var torrents = [
   {
     name: 'The Flash 2014 S01E01 HDTV x264-LOL[ettv]',
     excess: undefined
+  },
+  {
+    name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
+    excess: ['Dual-Audio', '1400Mb']
   }
 ];
 
