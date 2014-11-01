@@ -123,7 +123,7 @@ var torrents = [
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
     hardcoded: true,
-    excess: ['AC3']
+    excess: 'AC3'
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',

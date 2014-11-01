@@ -76,6 +76,7 @@ module.exports = function (name) {
   parts.excess = parts.excess.split(/\.\.+| +/).filter(Boolean);
 
   if(parts.excess.length === 0) delete parts.excess;
+  else if(parts.excess.length === 1) parts.excess = parts.excess[0];
 
   // cleans up title
   if(parts.title.indexOf(' ') === -1 && parts.title.indexOf('.') !== -1)
