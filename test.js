@@ -149,6 +149,11 @@ var torrents = [
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
     excess: ['Dual-Audio', '1400Mb']
+  },
+  {
+    name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
+    title: 'Teenage Mutant Ninja Turtles',
+    excess: 'HdRip'
   }
 ];
 

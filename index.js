@@ -57,7 +57,7 @@ module.exports = function (name) {
   if(matches.extended && matches.extended.index < lowestIndex) lowestIndex = matches.extended.index;
   if(matches.hardcoded && matches.hardcoded.index < lowestIndex) lowestIndex = matches.hardcoded.index;
 
-  parts.title = name.substr(0, lowestIndex);
+  parts.title = name.substr(0, lowestIndex).split('(')[0];
 
   // extracts excess from name
   for(key in parts) {
