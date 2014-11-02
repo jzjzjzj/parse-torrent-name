@@ -153,7 +153,11 @@ var torrents = [
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
     title: 'Teenage Mutant Ninja Turtles',
-    excess: 'HdRip'
+    quality: 'HdRip'
+  },
+  {
+    name: 'Teenage Mutant Ninja Turtles (unknown_release_type / 2014)',
+    excess: 'unknown_release_type'
   }
 ];
 
