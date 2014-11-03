@@ -169,6 +169,12 @@ var torrents = [
     name: '2047 - Sights of Death (2014) 720p BrRip x264 - YIFY',
     title: '2047 - Sights of Death',
     year: 2014,
+    excess: undefined,
+    repack: undefined
+  },
+  {
+    name: 'Two and a Half Men S12E01 HDTV x264 REPACK-LOL [eztv]',
+    repack: true,
     excess: undefined
   }
 ];

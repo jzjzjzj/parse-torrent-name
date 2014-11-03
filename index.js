@@ -9,7 +9,8 @@ var patterns = {
   region: /R[0-9]/,
   extended: /EXTENDED/,
   hardcoded: /HC/,
-  proper: /PROPER/
+  proper: /PROPER/,
+  repack: /REPACK/
 };
 
 module.exports = function (name) {
@@ -33,7 +34,8 @@ module.exports = function (name) {
     region: name.match(patterns.region),
     extended: name.match(patterns.extended),
     hardcoded: name.match(patterns.hardcoded),
-    proper: name.match(patterns.proper)
+    proper: name.match(patterns.proper),
+    repack: name.match(patterns.repack)
   };
 
   if(matches.season) parts.season = parseInt(matches.season[1]);
@@ -47,6 +49,7 @@ module.exports = function (name) {
   if(matches.extended) parts.extended = true;
   if(matches.hardcoded) parts.hardcoded = true;
   if(matches.proper) parts.proper = true;
+  if(matches.repack) parts.repack = true;
 
   // finds title
   if(matches.season && matches.season.index < lowestIndex) lowestIndex = matches.season.index;
@@ -60,6 +63,7 @@ module.exports = function (name) {
   if(matches.extended && matches.extended.index < lowestIndex) lowestIndex = matches.extended.index;
   if(matches.hardcoded && matches.hardcoded.index < lowestIndex) lowestIndex = matches.hardcoded.index;
   if(matches.proper && matches.proper.index < lowestIndex) lowestIndex = matches.proper.index;
+  if(matches.repack && matches.repack.index < lowestIndex) lowestIndex = matches.repack.index;
 
   parts.title = name.substr(0, lowestIndex).split('(')[0];
 
@@ -76,7 +80,7 @@ module.exports = function (name) {
   parts.excess = parts.excess.replace(/^[-\. ]+/, '');
   parts.excess = parts.excess.replace(/[-\. ]+$/, '');
   parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
-  parts.excess = parts.excess.replace(/EXTENDED|HC|PROPER/g, '');
+  parts.excess = parts.excess.replace(/EXTENDED|HC|PROPER|REPACK/g, '');
   parts.excess = parts.excess.split(/\.\.+| +/).filter(Boolean);
 
   if(parts.excess.length === 0) delete parts.excess;
