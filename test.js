@@ -157,7 +157,13 @@ var torrents = [
   },
   {
     name: 'Teenage Mutant Ninja Turtles (unknown_release_type / 2014)',
-    excess: 'unknown_release_type'
+    excess: 'unknown_release_type',
+    proper: undefined
+  },
+  {
+    name: 'The Simpsons S26E05 HDTV x264 PROPER-LOL [eztv]',
+    proper: true,
+    excess: undefined
   }
 ];
 
