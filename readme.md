@@ -10,8 +10,10 @@ Parses torrent name of a movie or TV show.
 - extended
 - group
 - hardcoded
+- proper
 - quality
 - region
+- repack
 - resolution
 - season
 - title
