@@ -164,6 +164,12 @@ var torrents = [
     name: 'The Simpsons S26E05 HDTV x264 PROPER-LOL [eztv]',
     proper: true,
     excess: undefined
+  },
+  {
+    name: '2047 - Sights of Death (2014) 720p BrRip x264 - YIFY',
+    title: '2047 - Sights of Death',
+    year: 2014,
+    excess: undefined
   }
 ];
 
