@@ -1,18 +1,21 @@
 var patterns = {
   season: /S?([0-9]{1,2})[Ex]/,
   episode: /[Ex]([0-9]{2})[^0-9]/,
-  year: /\(?((?:19|20)[0-9]{2})\)?/,
+  year: /\(?((?:19[0-9]|20[01])[0-9])\)?/,
   resolution: /[0-9]{3,4}p/,
-  quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
+  quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]BRip/,
   codec: /xvid|x264|h\.?264/i,
   group: /- ?([^-]+(?:-[^-]+-$)?)$/,
   region: /R[0-9]/,
   extended: /EXTENDED/,
-  hardcoded: /HC/
+  hardcoded: /HC/,
+  proper: /PROPER/,
+  repack: /REPACK/
 };
 
 module.exports = function (name) {
   var matches,
+    key,
     target,
     parts = {
       excess: name
@@ -30,7 +33,9 @@ module.exports = function (name) {
     group: name.match(patterns.group),
     region: name.match(patterns.region),
     extended: name.match(patterns.extended),
-    hardcoded: name.match(patterns.hardcoded)
+    hardcoded: name.match(patterns.hardcoded),
+    proper: name.match(patterns.proper),
+    repack: name.match(patterns.repack)
   };
 
   if(matches.season) parts.season = parseInt(matches.season[1]);
@@ -43,6 +48,8 @@ module.exports = function (name) {
   if(matches.region) parts.region = matches.region[0];
   if(matches.extended) parts.extended = true;
   if(matches.hardcoded) parts.hardcoded = true;
+  if(matches.proper) parts.proper = true;
+  if(matches.repack) parts.repack = true;
 
   // finds title
   if(matches.season && matches.season.index < lowestIndex) lowestIndex = matches.season.index;
@@ -55,8 +62,10 @@ module.exports = function (name) {
   if(matches.region && matches.region.index < lowestIndex) lowestIndex = matches.region.index;
   if(matches.extended && matches.extended.index < lowestIndex) lowestIndex = matches.extended.index;
   if(matches.hardcoded && matches.hardcoded.index < lowestIndex) lowestIndex = matches.hardcoded.index;
+  if(matches.proper && matches.proper.index < lowestIndex) lowestIndex = matches.proper.index;
+  if(matches.repack && matches.repack.index < lowestIndex) lowestIndex = matches.repack.index;
 
-  parts.title = name.substr(0, lowestIndex);
+  parts.title = name.substr(0, lowestIndex).split('(')[0];
 
   // extracts excess from name
   for(key in parts) {
@@ -71,10 +80,11 @@ module.exports = function (name) {
   parts.excess = parts.excess.replace(/^[-\. ]+/, '');
   parts.excess = parts.excess.replace(/[-\. ]+$/, '');
   parts.excess = parts.excess.replace(/[\(\)\/]/g, '');
-  parts.excess = parts.excess.replace(/EXTENDED|HC/g, '');
+  parts.excess = parts.excess.replace(/EXTENDED|HC|PROPER|REPACK/g, '');
   parts.excess = parts.excess.split(/\.\.+| +/).filter(Boolean);
 
   if(parts.excess.length === 0) delete parts.excess;
+  else if(parts.excess.length === 1) parts.excess = parts.excess[0];
 
   // cleans up title
   if(parts.title.indexOf(' ') === -1 && parts.title.indexOf('.') !== -1)

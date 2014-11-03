@@ -123,7 +123,7 @@ var torrents = [
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
     hardcoded: true,
-    excess: ['AC3']
+    excess: 'AC3'
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
@@ -144,6 +144,37 @@ var torrents = [
   },
   {
     name: 'The Flash 2014 S01E01 HDTV x264-LOL[ettv]',
+    excess: undefined
+  },
+  {
+    name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
+    excess: ['Dual-Audio', '1400Mb']
+  },
+  {
+    name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
+    title: 'Teenage Mutant Ninja Turtles',
+    quality: 'HdRip'
+  },
+  {
+    name: 'Teenage Mutant Ninja Turtles (unknown_release_type / 2014)',
+    excess: 'unknown_release_type',
+    proper: undefined
+  },
+  {
+    name: 'The Simpsons S26E05 HDTV x264 PROPER-LOL [eztv]',
+    proper: true,
+    excess: undefined
+  },
+  {
+    name: '2047 - Sights of Death (2014) 720p BrRip x264 - YIFY',
+    title: '2047 - Sights of Death',
+    year: 2014,
+    excess: undefined,
+    repack: undefined
+  },
+  {
+    name: 'Two and a Half Men S12E01 HDTV x264 REPACK-LOL [eztv]',
+    repack: true,
     excess: undefined
   }
 ];
