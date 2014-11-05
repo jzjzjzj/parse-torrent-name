@@ -189,7 +189,8 @@ var torrents = [
   },
   {
     name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
-    excess: 'MP3'
+    audio: 'MP3',
+    excess: undefined
   },
   {
     name: 'Dawn.Of.The.Planet.of.The.Apes.2014.1080p.WEB-DL.DD51.H264-RARBG',
