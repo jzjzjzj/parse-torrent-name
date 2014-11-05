@@ -50,7 +50,8 @@ var torrents = [
   {
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
     extended: true,
-    quality: 'WEB-DL'
+    quality: 'WEB-DL',
+    excess: 'DD5.1'
   },
   {
     name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',

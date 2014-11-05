@@ -21,7 +21,7 @@ core.on('end', function () {
   var clean;
 
   // clean up excess
-  clean = raw.replace(/(^[-\. ]+)|[\(\)\/]|(^[-\. ]+$)/g, '');
+  clean = raw.replace(/(^[-\. ]+)|[\(\)\/]|([-\. ]+$)/g, '');
   clean = clean.split(/\.\.+| +/).filter(Boolean);
 
   if(clean.length !== 0) {
