@@ -24,7 +24,7 @@ core.on('part', function (part) {
 });
 
 core.on('common', function () {
-  var raw = firstPart ? torrent.name.substr(0, firstPart.index) : torrent.name;
+  var raw = firstPart ? torrent.name.substr(0, firstPart.index).split('(')[0] : torrent.name;
   var clean = raw;
 
   // clean up title

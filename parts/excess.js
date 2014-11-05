@@ -28,7 +28,7 @@ core.on('end', function () {
     core.emit('part', {
       name: 'excess',
       raw: raw,
-      clean: clean
+      clean: clean.length === 1 ? clean[0] : clean
     });
   }
 });
