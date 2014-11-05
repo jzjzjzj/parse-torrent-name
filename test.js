@@ -1,3 +1,5 @@
+'use strict';
+
 var ptn = require('./');
 var tape = require('tape');
 
@@ -150,20 +152,25 @@ var torrents = [
 
 torrents.forEach(function(torrent) {
   var testName = '"' + torrent.name + '"';
+  var parts = ptn(torrent.name);
 
   tape(testName, function (test) {
     var key, testMessage;
 
     for(key in torrent) {
-      if(key === 'name') continue;
+      if(torrent.hasOwnProperty(key)) {
+        if(key === 'name') {
+          continue;
+        }
 
-      testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
+        testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
 
-      test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
-        ptn(torrent.name)[key],
-        torrent[key],
-        testMessage
-      );
+        test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
+          parts[key],
+          torrent[key],
+          testMessage
+        );
+      }
     }
 
     test.end();
