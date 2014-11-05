@@ -51,7 +51,8 @@ var torrents = [
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
     extended: true,
     quality: 'WEB-DL',
-    excess: 'DD5.1'
+    audio: 'DD5.1',
+    excess: undefined
   },
   {
     name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',
@@ -90,7 +91,8 @@ var torrents = [
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
     title: 'Marvel\'s Agents of S H I E L D',
-    excess: ['Shadows', 'DD5.1']
+    audio: 'DD5.1',
+    excess: 'Shadows'
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -103,7 +105,8 @@ var torrents = [
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
     codec: 'H.264',
-    year: undefined
+    year: undefined,
+    excess: undefined
   },
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
