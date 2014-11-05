@@ -212,7 +212,8 @@ var torrents = [
   },
   {
     name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
-    excess: 'AAC2.0'
+    audio: 'AAC2.0',
+    excess: undefined
   },
   {
     name: 'Lucy 2014 Dual-Audio 720p WEBRip',
