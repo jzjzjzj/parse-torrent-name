@@ -221,7 +221,8 @@ var torrents = [
   },
   {
     name: 'Into The Storm 2014 1080p BRRip x264 DTS-JYK',
-    excess: 'DTS'
+    audio: 'DTS',
+    excess: undefined
   }
 ];
 
