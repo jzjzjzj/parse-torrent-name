@@ -54,9 +54,9 @@ ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
 { year: 2014,
   quality: 'HDRip',
   codec: 'XViD',
+  audio: 'AC3',
   group: 'juggs[ETRG]',
   hardcoded: true,
-  title: 'AL 288-1',
-  excess: 'AC3' }
+  title: 'AL 288-1' }
 */
 ```
