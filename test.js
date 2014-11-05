@@ -206,8 +206,8 @@ var torrents = [
   },
   {
     name: 'Teenage.Mutant.Ninja.Turtles.2014.720p.HDRip.x264.AC3.5.1-RARBG',
-    audio: 'AC3',
-    excess: '5.1'
+    audio: 'AC3.5.1',
+    excess: undefined
   },
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
