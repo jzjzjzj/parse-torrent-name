@@ -111,7 +111,8 @@ var torrents = [
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
     region: 'R5',
-    excess: 'LiNE'
+    audio: 'LiNE',
+    excess: undefined
   },
   {
     name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
