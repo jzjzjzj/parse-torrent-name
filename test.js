@@ -132,7 +132,8 @@ var torrents = [
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
     hardcoded: true,
-    excess: 'AC3'
+    audio: 'AC3',
+    excess: undefined
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
@@ -190,7 +191,8 @@ var torrents = [
   {
     name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
     quality: 'WEBrip',
-    excess: ['AC3', 'MiLLENiUM']
+    audio: 'AC3',
+    excess: 'MiLLENiUM'
   },
   {
     name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
@@ -204,7 +206,8 @@ var torrents = [
   },
   {
     name: 'Teenage.Mutant.Ninja.Turtles.2014.720p.HDRip.x264.AC3.5.1-RARBG',
-    excess: 'AC3.5.1'
+    audio: 'AC3',
+    excess: '5.1'
   },
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
