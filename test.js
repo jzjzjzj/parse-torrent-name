@@ -156,7 +156,8 @@ var torrents = [
   },
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
-    excess: ['Dual-Audio', '1400Mb']
+    audio: 'Dual-Audio',
+    excess: '1400Mb'
   },
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
@@ -214,7 +215,8 @@ var torrents = [
   },
   {
     name: 'Lucy 2014 Dual-Audio 720p WEBRip',
-    excess: 'Dual-Audio'
+    audio: 'Dual-Audio',
+    excess: undefined
   },
   {
     name: 'Into The Storm 2014 1080p BRRip x264 DTS-JYK',
