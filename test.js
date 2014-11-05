@@ -229,6 +229,10 @@ var torrents = [
     name: 'Into The Storm 2014 1080p BRRip x264 DTS-JYK',
     audio: 'DTS',
     excess: undefined
+  },
+  {
+    name: 'Sin.City.A.Dame.to.Kill.For.2014.1080p.BluRay.x264-SPARKS',
+    quality: 'BluRay'
   }
 ];
 
