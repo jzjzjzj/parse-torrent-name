@@ -89,7 +89,8 @@ var torrents = [
   },
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
-    title: 'Marvel\'s Agents of S H I E L D'
+    title: 'Marvel\'s Agents of S H I E L D',
+    excess: ['Shadows', 'DD5.1']
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -106,7 +107,8 @@ var torrents = [
   },
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
-    region: 'R5'
+    region: 'R5',
+    excess: 'LiNE'
   },
   {
     name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
@@ -182,7 +184,36 @@ var torrents = [
   },
   {
     name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
-    quality: 'WEBrip'
+    quality: 'WEBrip',
+    excess: ['AC3', 'MiLLENiUM']
+  },
+  {
+    name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
+    excess: 'MP3'
+  },
+  {
+    name: 'Dawn.Of.The.Planet.of.The.Apes.2014.1080p.WEB-DL.DD51.H264-RARBG',
+    excess: 'DD51'
+  },
+  {
+    name: 'Teenage.Mutant.Ninja.Turtles.2014.720p.HDRip.x264.AC3.5.1-RARBG',
+    excess: 'AC3.5.1'
+  },
+  {
+    name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
+    excess: ['Viper', 'AAC']
+  },
+  {
+    name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
+    excess: 'AAC2.0'
+  },
+  {
+    name: 'Lucy 2014 Dual-Audio 720p WEBRip',
+    excess: 'Dual-Audio'
+  },
+  {
+    name: 'Into The Storm 2014 1080p BRRip x264 DTS-JYK',
+    excess: 'DTS'
   }
 ];
 
