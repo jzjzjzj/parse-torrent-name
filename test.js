@@ -208,7 +208,8 @@ var torrents = [
   },
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
-    excess: ['Viper', 'AAC']
+    audio: 'AAC',
+    excess: 'Viper'
   },
   {
     name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',

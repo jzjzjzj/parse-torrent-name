@@ -13,7 +13,7 @@ var patterns = {
   resolution: /[0-9]{3,4}p/,
   quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip/,
   codec: /xvid|x264|h\.?264/i,
-  audio: /MP3|DD5\.?1|Dual\-Audio|LiNE|DTS|AAC2\.0/,
+  audio: /MP3|DD5\.?1|Dual\-Audio|LiNE|DTS|AAC(?:2\.0)?/,
   group: /(- ?([^-]+(?:-[^-]+-$)?))$/,
   region: /R[0-9]/,
   extended: /EXTENDED/,
