@@ -179,6 +179,10 @@ var torrents = [
     name: 'Two and a Half Men S12E01 HDTV x264 REPACK-LOL [eztv]',
     repack: true,
     excess: undefined
+  },
+  {
+    name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
+    quality: 'WEBrip'
   }
 ];
 
