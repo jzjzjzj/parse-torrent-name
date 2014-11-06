@@ -4,6 +4,7 @@ Parses torrent name of a movie or TV show.
 
 **Possible parts extracted:**
 
+- audio
 - codec
 - episode
 - excess
