@@ -1,4 +1,4 @@
-# parse-torrent-name [![Build Status](https://travis-ci.org/jzjzjzj/parse-torrent-name.svg?branch=master)](https://travis-ci.org/jzjzjzj/parse-torrent-name)
+# parse-torrent-name [![Build Status](https://travis-ci.org/jzjzjzj/parse-torrent-name.svg?branch=master)](https://travis-ci.org/jzjzjzj/parse-torrent-name) [![Code Climate](https://codeclimate.com/github/jzjzjzj/parse-torrent-name/badges/gpa.svg)](https://codeclimate.com/github/jzjzjzj/parse-torrent-name)
 
 Parses torrent name of a movie or TV show.
 
@@ -51,10 +51,10 @@ ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
 
 ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
 /*
-{ excess: [ 'AC3' ],
-  year: 2014,
+{ year: 2014,
   quality: 'HDRip',
   codec: 'XViD',
+  audio: 'AC3',
   group: 'juggs[ETRG]',
   hardcoded: true,
   title: 'AL 288-1' }

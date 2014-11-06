@@ -1,3 +1,5 @@
+'use strict';
+
 var ptn = require('./');
 var tape = require('tape');
 
@@ -10,6 +12,7 @@ var torrents = [
     resolution: '720p',
     quality: 'HDTV',
     codec: 'x264',
+    audio: undefined,
     group: 'ASAP[ettv]',
     extended: undefined,
     hardcoded: undefined,
@@ -48,7 +51,9 @@ var torrents = [
   {
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
     extended: true,
-    quality: 'WEB-DL'
+    quality: 'WEB-DL',
+    audio: 'DD5.1',
+    excess: undefined
   },
   {
     name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',
@@ -86,7 +91,9 @@ var torrents = [
   },
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
-    title: 'Marvel\'s Agents of S H I E L D'
+    title: 'Marvel\'s Agents of S H I E L D',
+    audio: 'DD5.1',
+    excess: 'Shadows'
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -99,11 +106,14 @@ var torrents = [
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
     codec: 'H.264',
-    year: undefined
+    year: undefined,
+    excess: undefined
   },
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
-    region: 'R5'
+    region: 'R5',
+    audio: 'LiNE',
+    excess: undefined
   },
   {
     name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
@@ -123,7 +133,8 @@ var torrents = [
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
     hardcoded: true,
-    excess: 'AC3'
+    audio: 'AC3',
+    excess: undefined
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
@@ -148,7 +159,8 @@ var torrents = [
   },
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
-    excess: ['Dual-Audio', '1400Mb']
+    audio: 'Dual-Audio',
+    excess: '1400Mb'
   },
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
@@ -176,25 +188,75 @@ var torrents = [
     name: 'Two and a Half Men S12E01 HDTV x264 REPACK-LOL [eztv]',
     repack: true,
     excess: undefined
+  },
+  {
+    name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
+    quality: 'WEBrip',
+    audio: 'AC3',
+    excess: 'MiLLENiUM'
+  },
+  {
+    name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
+    audio: 'MP3',
+    excess: undefined
+  },
+  {
+    name: 'Dawn.Of.The.Planet.of.The.Apes.2014.1080p.WEB-DL.DD51.H264-RARBG',
+    audio: 'DD51',
+    excess: undefined
+  },
+  {
+    name: 'Teenage.Mutant.Ninja.Turtles.2014.720p.HDRip.x264.AC3.5.1-RARBG',
+    audio: 'AC3.5.1',
+    excess: undefined
+  },
+  {
+    name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
+    audio: 'AAC',
+    excess: 'Viper'
+  },
+  {
+    name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
+    audio: 'AAC2.0',
+    excess: undefined
+  },
+  {
+    name: 'Lucy 2014 Dual-Audio 720p WEBRip',
+    audio: 'Dual-Audio',
+    excess: undefined
+  },
+  {
+    name: 'Into The Storm 2014 1080p BRRip x264 DTS-JYK',
+    audio: 'DTS',
+    excess: undefined
+  },
+  {
+    name: 'Sin.City.A.Dame.to.Kill.For.2014.1080p.BluRay.x264-SPARKS',
+    quality: 'BluRay'
   }
 ];
 
 torrents.forEach(function(torrent) {
   var testName = '"' + torrent.name + '"';
+  var parts = ptn(torrent.name);
 
   tape(testName, function (test) {
     var key, testMessage;
 
     for(key in torrent) {
-      if(key === 'name') continue;
+      if(torrent.hasOwnProperty(key)) {
+        if(key === 'name') {
+          continue;
+        }
 
-      testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
+        testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
 
-      test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
-        ptn(torrent.name)[key],
-        torrent[key],
-        testMessage
-      );
+        test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
+          parts[key],
+          torrent[key],
+          testMessage
+        );
+      }
     }
 
     test.end();
