@@ -37,7 +37,7 @@ ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
   quality: 'HDTV',
   codec: 'x264',
   group: 'KILLERS[rartv]',
-  name: 'The Staying Alive' }
+  title: 'The Staying Alive' }
 */
 
 ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
@@ -47,7 +47,7 @@ ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
   quality: 'BrRip',
   codec: 'x264',
   group: 'YIFY',
-  name: 'Captain Russia The Summer Soldier' }
+  title: 'Captain Russia The Summer Soldier' }
 */
 
 ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
