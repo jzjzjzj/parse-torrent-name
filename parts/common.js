@@ -79,3 +79,9 @@ core.on('start', function() {
 
   core.emit('common');
 });
+
+core.on('late', function (part) {
+  if(part.name === 'group') {
+    core.emit('part', part);
+  }
+});

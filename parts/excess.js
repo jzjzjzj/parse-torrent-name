@@ -2,9 +2,10 @@
 
 var core = require('../core');
 
-var raw;
+var torrent, raw;
 
-core.on('setup', function (torrent) {
+core.on('setup', function (data) {
+  torrent = data;
   raw = torrent.name;
 });
 
@@ -18,11 +19,22 @@ core.on('part', function (part) {
 });
 
 core.on('end', function () {
-  var clean;
+  var clean, groupPattern;
 
   // clean up excess
   clean = raw.replace(/(^[-\. ]+)|[\(\)\/]|([-\. ]+$)/g, '');
   clean = clean.split(/\.\.+| +/).filter(Boolean);
+
+  if(clean.length !== 0) {
+    groupPattern = clean[clean.length - 1] + '$';
+
+    if(torrent.name.match(new RegExp(groupPattern))) {
+      core.emit('late', {
+        name: 'group',
+        clean: clean.pop()
+      });
+    }
+  }
 
   if(clean.length !== 0) {
     core.emit('part', {
