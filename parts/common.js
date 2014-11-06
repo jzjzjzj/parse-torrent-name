@@ -20,7 +20,7 @@ var patterns = {
   hardcoded: /HC/,
   proper: /PROPER/,
   repack: /REPACK/,
-  garbage: /1400Mb/
+  garbage: /1400Mb|3rd Nov/
 };
 var types = {
   season: 'integer',
