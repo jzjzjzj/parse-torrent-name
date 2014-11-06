@@ -62,6 +62,12 @@ core.on('start', function() {
         }
       }
 
+      if(key === 'group') {
+        if(clean.match(patterns.codec) || clean.match(patterns.quality)) {
+          continue;
+        }
+      }
+
       core.emit('part', {
         name: key,
         match: match,

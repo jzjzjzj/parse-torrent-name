@@ -161,7 +161,7 @@ var torrents = [
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
     audio: 'Dual-Audio',
     garbage: '1400Mb',
-    group: 'Audio WEBRip 1400Mb',
+    group: undefined,
     excess: undefined
   },
   {
@@ -216,7 +216,7 @@ var torrents = [
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
     audio: 'AAC',
-    group: 'DL.x264.AAC',
+    group: undefined,
     excess: 'Viper'
   },
   {
@@ -227,7 +227,7 @@ var torrents = [
   {
     name: 'Lucy 2014 Dual-Audio 720p WEBRip',
     audio: 'Dual-Audio',
-    group: 'Audio 720p WEBRip',
+    group: undefined,
     excess: undefined
   },
   {
@@ -246,9 +246,9 @@ var torrents = [
   },
   {
     name: 'Jack.And.The.Cuckoo-Clock.Heart.2013.BRRip XViD',
-    title: 'Jack And The Cuckoo',
-    group: 'Clock.Heart.2013.BRRip XViD',
-    excess: 'Clock.Heart'
+    title: 'Jack And The Cuckoo-Clock Heart',
+    group: undefined,
+    excess: undefined
   },
   {
     name: 'WWE Hell in a Cell 2014 HDTV x264 SNHD',
