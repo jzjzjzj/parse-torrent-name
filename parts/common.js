@@ -19,7 +19,8 @@ var patterns = {
   extended: /EXTENDED/,
   hardcoded: /HC/,
   proper: /PROPER/,
-  repack: /REPACK/
+  repack: /REPACK/,
+  garbage: /1400Mb/
 };
 var types = {
   season: 'integer',

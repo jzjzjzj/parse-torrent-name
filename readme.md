@@ -9,6 +9,7 @@ Parses torrent name of a movie or TV show.
 - episode
 - excess
 - extended
+- garbage
 - group
 - hardcoded
 - proper
