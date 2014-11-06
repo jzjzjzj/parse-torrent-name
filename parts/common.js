@@ -38,7 +38,7 @@ core.on('setup', function (data) {
 });
 
 core.on('start', function() {
-  var key, match, index, clean;
+  var key, match, index, clean, part;
 
   for(key in patterns) {
     if(patterns.hasOwnProperty(key)) {
@@ -68,12 +68,18 @@ core.on('start', function() {
         }
       }
 
-      core.emit('part', {
+      part = {
         name: key,
         match: match,
         raw: match[index.raw],
         clean: clean
-      });
+      };
+
+      if(key === 'episode') {
+        core.emit('map', torrent.name.replace(part.raw, '{episode}'));
+      }
+
+      core.emit('part', part);
     }
   }
 
@@ -82,6 +88,9 @@ core.on('start', function() {
 
 core.on('late', function (part) {
   if(part.name === 'group') {
+    core.emit('part', part);
+  }
+  else if(part.name === 'episodeName') {
     core.emit('part', part);
   }
 });
