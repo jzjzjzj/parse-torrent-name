@@ -160,7 +160,8 @@ var torrents = [
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
     audio: 'Dual-Audio',
-    excess: '1400Mb'
+    garbage: '1400Mb',
+    excess: undefined
   },
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
@@ -233,6 +234,11 @@ var torrents = [
   {
     name: 'Sin.City.A.Dame.to.Kill.For.2014.1080p.BluRay.x264-SPARKS',
     quality: 'BluRay'
+  },
+  {
+    name: 'WWE Monday Night Raw 3rd Nov 2014 HDTV x264-Sir Paul',
+    title: 'WWE Monday Night Raw',
+    garbage: '3rd Nov'
   }
 ];
 
