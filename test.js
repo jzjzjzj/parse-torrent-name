@@ -257,8 +257,8 @@ var torrents = [
   },
   {
     name: 'Dracula.Untold.2014.TS.XViD.AC3.MrSeeN-SiMPLE',
-    group: 'SiMPLE',
-    excess: 'MrSeeN'
+    group: 'MrSeeN-SiMPLE',
+    excess: undefined
   }
 ];
 
