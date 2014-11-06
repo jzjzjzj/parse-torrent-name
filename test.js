@@ -161,6 +161,7 @@ var torrents = [
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
     audio: 'Dual-Audio',
     garbage: '1400Mb',
+    group: undefined,
     excess: undefined
   },
   {
@@ -194,7 +195,8 @@ var torrents = [
     name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
     quality: 'WEBrip',
     audio: 'AC3',
-    excess: 'MiLLENiUM'
+    group: 'MiLLENiUM',
+    excess: undefined
   },
   {
     name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
@@ -214,6 +216,7 @@ var torrents = [
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
     audio: 'AAC',
+    group: undefined,
     excess: 'Viper'
   },
   {
@@ -224,6 +227,7 @@ var torrents = [
   {
     name: 'Lucy 2014 Dual-Audio 720p WEBRip',
     audio: 'Dual-Audio',
+    group: undefined,
     excess: undefined
   },
   {
@@ -239,6 +243,22 @@ var torrents = [
     name: 'WWE Monday Night Raw 3rd Nov 2014 HDTV x264-Sir Paul',
     title: 'WWE Monday Night Raw',
     garbage: '3rd Nov'
+  },
+  {
+    name: 'Jack.And.The.Cuckoo-Clock.Heart.2013.BRRip XViD',
+    title: 'Jack And The Cuckoo-Clock Heart',
+    group: undefined,
+    excess: undefined
+  },
+  {
+    name: 'WWE Hell in a Cell 2014 HDTV x264 SNHD',
+    group: 'SNHD',
+    excess: undefined
+  },
+  {
+    name: 'Dracula.Untold.2014.TS.XViD.AC3.MrSeeN-SiMPLE',
+    group: 'MrSeeN-SiMPLE',
+    excess: undefined
   }
 ];
 

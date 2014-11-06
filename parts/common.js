@@ -62,6 +62,12 @@ core.on('start', function() {
         }
       }
 
+      if(key === 'group') {
+        if(clean.match(patterns.codec) || clean.match(patterns.quality)) {
+          continue;
+        }
+      }
+
       core.emit('part', {
         name: key,
         match: match,
@@ -72,4 +78,10 @@ core.on('start', function() {
   }
 
   core.emit('common');
+});
+
+core.on('late', function (part) {
+  if(part.name === 'group') {
+    core.emit('part', part);
+  }
 });
