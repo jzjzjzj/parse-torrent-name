@@ -92,9 +92,9 @@ var torrents = [
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
     title: 'Marvel\'s Agents of S H I E L D',
-    episodeName: undefined,
+    episodeName: 'Shadows',
     audio: 'DD5.1',
-    excess: 'Shadows'
+    excess: undefined
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -216,10 +216,10 @@ var torrents = [
   },
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
-    episodeName: undefined,
+    episodeName: 'Viper',
     audio: 'AAC',
     group: undefined,
-    excess: 'Viper'
+    excess: undefined
   },
   {
     name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
@@ -264,20 +264,20 @@ var torrents = [
   },
   {
     name: 'The Missing 1x01 Pilot HDTV x264-FoV [eztv]',
-    episodeName: undefined,
-    excess: 'Pilot'
+    episodeName: 'Pilot',
+    excess: undefined
   },
   {
     name: 'Doctor.Who.2005.8x11.Dark.Water.720p.HDTV.x264-FoV[rartv]',
     season: 8,
     episode: 11,
-    episodeName: undefined,
-    excess: 'Dark.Water'
+    episodeName: 'Dark Water',
+    excess: undefined
   },
   {
     name: 'Gotham.S01E07.Penguins.Umbrella.WEB-DL.x264.AAC',
-    episodeName: undefined,
-    excess: 'Penguins.Umbrella'
+    episodeName: 'Penguins Umbrella',
+    excess: undefined
   }
 ];
 
