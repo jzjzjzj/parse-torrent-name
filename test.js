@@ -233,6 +233,11 @@ var torrents = [
   {
     name: 'Sin.City.A.Dame.to.Kill.For.2014.1080p.BluRay.x264-SPARKS',
     quality: 'BluRay'
+  },
+  {
+    name: 'WWE Monday Night Raw 3rd Nov 2014 HDTV x264-Sir Paul',
+    title: 'WWE Monday Night Raw 3rd Nov',
+    garbage: undefined
   }
 ];
 
