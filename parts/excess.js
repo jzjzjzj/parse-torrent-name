@@ -49,7 +49,7 @@ core.on('end', function () {
       if(torrent.map.match(new RegExp(episodeNamePattern))) {
         core.emit('late', {
           name: 'episodeName',
-          clean: clean.shift().replace('.', ' ')
+          clean: clean.shift().replace(/\./g, ' ')
         });
       }
     }
