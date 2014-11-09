@@ -278,6 +278,11 @@ var torrents = [
     name: 'Gotham.S01E07.Penguins.Umbrella.WEB-DL.x264.AAC',
     episodeName: 'Penguins Umbrella',
     excess: undefined
+  },
+  {
+    name: 'One Shot [2014] DVDRip XViD-ViCKY',
+    title: 'One Shot',
+    excess: undefined
   }
 ];
 
