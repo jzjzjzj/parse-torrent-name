@@ -281,8 +281,8 @@ var torrents = [
   },
   {
     name: 'One Shot [2014] DVDRip XViD-ViCKY',
-    title: 'One Shot [',
-    excess: ']'
+    title: 'One Shot',
+    excess: undefined
   }
 ];
 
