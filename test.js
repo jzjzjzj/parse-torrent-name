@@ -283,6 +283,16 @@ var torrents = [
     name: 'One Shot [2014] DVDRip XViD-ViCKY',
     title: 'One Shot',
     excess: undefined
+  },
+  {
+    name: 'The Shaukeens 2014 Hindi (1CD) DvDScr x264 AAC...Hon3y',
+    quality: undefined,
+    excess: ['Hindi', '1CD', 'DvDScr']
+  },
+  {
+    name: 'The Shaukeens (2014) 1CD DvDScr Rip x264 [DDR]',
+    quality: undefined,
+    excess: ['1CD', 'DvDScr', 'Rip', '[DDR]']
   }
 ];
 
