@@ -286,13 +286,13 @@ var torrents = [
   },
   {
     name: 'The Shaukeens 2014 Hindi (1CD) DvDScr x264 AAC...Hon3y',
-    quality: undefined,
-    excess: ['Hindi', '1CD', 'DvDScr']
+    quality: 'DvDScr',
+    excess: ['Hindi', '1CD']
   },
   {
     name: 'The Shaukeens (2014) 1CD DvDScr Rip x264 [DDR]',
-    quality: undefined,
-    excess: ['1CD', 'DvDScr', 'Rip', '[DDR]']
+    quality: 'DvDScr',
+    excess: ['1CD', 'Rip', '[DDR]']
   }
 ];
 
