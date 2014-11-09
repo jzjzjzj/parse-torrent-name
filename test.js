@@ -292,6 +292,7 @@ var torrents = [
   {
     name: 'The Shaukeens (2014) 1CD DvDScr Rip x264 [DDR]',
     quality: 'DvDScr',
+    garbage: undefined,
     excess: ['1CD', 'Rip', '[DDR]']
   }
 ];
