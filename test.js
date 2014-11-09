@@ -294,6 +294,11 @@ var torrents = [
     quality: 'DvDScr',
     garbage: 'Rip',
     excess: ['1CD', '[DDR]']
+  },
+  {
+    name: 'Annabelle.2014.1080p.PROPER.HC.WEBRip.x264.AAC.2.0-RARBG',
+    audio: 'AAC',
+    group: '2.0-RARBG'
   }
 ];
 
