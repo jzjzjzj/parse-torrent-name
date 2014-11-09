@@ -297,8 +297,8 @@ var torrents = [
   },
   {
     name: 'Annabelle.2014.1080p.PROPER.HC.WEBRip.x264.AAC.2.0-RARBG',
-    audio: 'AAC',
-    group: '2.0-RARBG'
+    audio: 'AAC.2.0',
+    group: 'RARBG'
   }
 ];
 
