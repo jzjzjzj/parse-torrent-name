@@ -302,8 +302,8 @@ var torrents = [
   },
   {
     name: 'Interstellar (2014) CAM ENG x264 AAC-CPG',
-    quality: undefined,
-    excess: ['CAM', 'ENG']
+    quality: 'CAM',
+    excess: 'ENG'
   }
 ];
 
