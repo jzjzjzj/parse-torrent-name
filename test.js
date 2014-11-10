@@ -299,6 +299,11 @@ var torrents = [
     name: 'Annabelle.2014.1080p.PROPER.HC.WEBRip.x264.AAC.2.0-RARBG',
     audio: 'AAC.2.0',
     group: 'RARBG'
+  },
+  {
+    name: 'Interstellar (2014) CAM ENG x264 AAC-CPG',
+    quality: undefined,
+    excess: ['CAM', 'ENG']
   }
 ];
 
