@@ -9,18 +9,20 @@ var core = require('../core');
 var patterns = {
   season: /(S?([0-9]{1,2}))[Ex]/,
   episode: /([Ex]([0-9]{2})[^0-9])/,
-  year: /(\(?((?:19[0-9]|20[01])[0-9])\)?)/,
+  year: /([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)/,
   resolution: /[0-9]{3,4}p/,
-  quality: /(?:PPV\.)?HDTV|HDCAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|BluRay/,
+  quality: /(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|BluRay|DvDScr/,
   codec: /xvid|x264|h\.?264/i,
-  audio: /MP3|DD5\.?1|Dual\-Audio|LiNE|DTS|AAC(?:2\.0)?|AC3(?:\.5\.1)?/,
-  group: /(- ?([^-]+(?:-[^-]+-$)?))$/,
+  audio: /MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|AAC(?:\.?2\.0)?|AC3(?:\.5\.1)?/,
+  group: /(- ?([^-]+(?:-={[^-]+-?$)?))$/,
   region: /R[0-9]/,
   extended: /EXTENDED/,
   hardcoded: /HC/,
   proper: /PROPER/,
   repack: /REPACK/,
-  garbage: /1400Mb|3rd Nov/
+  container: /MKV|AVI/,
+  widescreen: /WS/,
+  garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {
   season: 'integer',
@@ -29,7 +31,8 @@ var types = {
   extended: 'boolean',
   hardcoded: 'boolean',
   proper: 'boolean',
-  repack: 'boolean'
+  repack: 'boolean',
+  widescreen: 'boolean'
 };
 var torrent;
 
@@ -38,7 +41,7 @@ core.on('setup', function (data) {
 });
 
 core.on('start', function() {
-  var key, match, index, clean;
+  var key, match, index, clean, part;
 
   for(key in patterns) {
     if(patterns.hasOwnProperty(key)) {
@@ -68,12 +71,18 @@ core.on('start', function() {
         }
       }
 
-      core.emit('part', {
+      part = {
         name: key,
         match: match,
         raw: match[index.raw],
         clean: clean
-      });
+      };
+
+      if(key === 'episode') {
+        core.emit('map', torrent.name.replace(part.raw, '{episode}'));
+      }
+
+      core.emit('part', part);
     }
   }
 
@@ -82,6 +91,9 @@ core.on('start', function() {
 
 core.on('late', function (part) {
   if(part.name === 'group') {
+    core.emit('part', part);
+  }
+  else if(part.name === 'episodeName') {
     core.emit('part', part);
   }
 });

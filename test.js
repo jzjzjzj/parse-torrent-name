@@ -16,6 +16,7 @@ var torrents = [
     group: 'ASAP[ettv]',
     extended: undefined,
     hardcoded: undefined,
+    widescreen: undefined,
     excess: undefined
   },
   {
@@ -92,8 +93,9 @@ var torrents = [
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
     title: 'Marvel\'s Agents of S H I E L D',
+    episodeName: 'Shadows',
     audio: 'DD5.1',
-    excess: 'Shadows'
+    excess: undefined
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -215,9 +217,10 @@ var torrents = [
   },
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
+    episodeName: 'Viper',
     audio: 'AAC',
     group: undefined,
-    excess: 'Viper'
+    excess: undefined
   },
   {
     name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
@@ -259,6 +262,68 @@ var torrents = [
     name: 'Dracula.Untold.2014.TS.XViD.AC3.MrSeeN-SiMPLE',
     group: 'MrSeeN-SiMPLE',
     excess: undefined
+  },
+  {
+    name: 'The Missing 1x01 Pilot HDTV x264-FoV [eztv]',
+    episodeName: 'Pilot',
+    excess: undefined
+  },
+  {
+    name: 'Doctor.Who.2005.8x11.Dark.Water.720p.HDTV.x264-FoV[rartv]',
+    season: 8,
+    episode: 11,
+    episodeName: 'Dark Water',
+    excess: undefined
+  },
+  {
+    name: 'Gotham.S01E07.Penguins.Umbrella.WEB-DL.x264.AAC',
+    episodeName: 'Penguins Umbrella',
+    excess: undefined
+  },
+  {
+    name: 'One Shot [2014] DVDRip XViD-ViCKY',
+    title: 'One Shot',
+    excess: undefined
+  },
+  {
+    name: 'The Shaukeens 2014 Hindi (1CD) DvDScr x264 AAC...Hon3y',
+    quality: 'DvDScr',
+    excess: ['Hindi', '1CD']
+  },
+  {
+    name: 'The Shaukeens (2014) 1CD DvDScr Rip x264 [DDR]',
+    quality: 'DvDScr',
+    garbage: 'Rip',
+    excess: ['1CD', '[DDR]']
+  },
+  {
+    name: 'Annabelle.2014.1080p.PROPER.HC.WEBRip.x264.AAC.2.0-RARBG',
+    audio: 'AAC.2.0',
+    group: 'RARBG'
+  },
+  {
+    name: 'Interstellar (2014) CAM ENG x264 AAC-CPG',
+    quality: 'CAM',
+    excess: 'ENG'
+  },
+  {
+    name: 'Guardians of the Galaxy (2014) Dual Audio DVDRip AVI',
+    audio: 'Dual Audio',
+    container: 'AVI',
+    group: undefined,
+    excess: undefined
+  },
+  {
+    name: 'Eliza Graves (2014) Dual Audio WEB-DL 720p MKV x264',
+    container: 'MKV',
+    excess: undefined
+  },
+  {
+    name: 'WWE Monday Night Raw 2014 11 10 WS PDTV x264-RKOFAN1990 -={SPARR',
+    widescreen: true,
+    quality: 'PDTV',
+    group: 'RKOFAN1990 -={SPARR',
+    excess: ['11', '10']
   }
 ];
 

@@ -22,8 +22,12 @@ core.on('part', function (part) {
   raw = raw.replace(part.raw, '');
 });
 
+core.on('map', function (map) {
+  torrent.map = map;
+});
+
 core.on('end', function () {
-  var clean, groupPattern;
+  var clean, groupPattern, episodeNamePattern;
 
   // clean up excess
   clean = raw.replace(/(^[-\. ]+)|[\(\)\/]|([-\. ]+$)/g, '');
@@ -37,6 +41,17 @@ core.on('end', function () {
         name: 'group',
         clean: clean.pop() + groupRaw
       });
+    }
+
+    if(torrent.map) {
+      episodeNamePattern = '{episode}' + clean[0];
+
+      if(torrent.map.match(new RegExp(episodeNamePattern))) {
+        core.emit('late', {
+          name: 'episodeName',
+          clean: clean.shift().replace(/\./g, ' ')
+        });
+      }
     }
   }
 
