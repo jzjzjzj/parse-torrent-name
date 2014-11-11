@@ -314,8 +314,8 @@ var torrents = [
   },
   {
     name: 'Eliza Graves (2014) Dual Audio WEB-DL 720p MKV x264',
-    container: undefined,
-    excess: 'MKV'
+    container: 'MKV',
+    excess: undefined
   }
 ];
 
