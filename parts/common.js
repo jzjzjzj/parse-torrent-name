@@ -20,7 +20,7 @@ var patterns = {
   hardcoded: /HC/,
   proper: /PROPER/,
   repack: /REPACK/,
-  container: /MKV/,
+  container: /MKV|AVI/,
   garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {
