@@ -340,7 +340,7 @@ torrents.forEach(function(torrent) {
           continue;
         }
 
-        testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
+        testMessage = key + ': ' + JSON.stringify(torrent[key]);
 
         test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
           parts[key],
