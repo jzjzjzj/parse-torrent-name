@@ -307,8 +307,8 @@ var torrents = [
   },
   {
     name: 'Guardians of the Galaxy (2014) Dual Audio DVDRip AVI',
-    audio: undefined,
-    excess: ['Dual', 'Audio']
+    audio: 'Dual Audio',
+    excess: undefined
   }
 ];
 
