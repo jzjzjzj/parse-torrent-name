@@ -21,6 +21,7 @@ var patterns = {
   proper: /PROPER/,
   repack: /REPACK/,
   container: /MKV|AVI/,
+  widescreen: /WS/,
   garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {
@@ -30,7 +31,8 @@ var types = {
   extended: 'boolean',
   hardcoded: 'boolean',
   proper: 'boolean',
-  repack: 'boolean'
+  repack: 'boolean',
+  widescreen: 'boolean'
 };
 var torrent;
 
