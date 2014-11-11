@@ -14,7 +14,7 @@ var patterns = {
   quality: /(?:PPV\.)?HDTV|(?:HD)?CAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|BluRay|DvDScr/,
   codec: /xvid|x264|h\.?264/i,
   audio: /MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|AAC(?:\.?2\.0)?|AC3(?:\.5\.1)?/,
-  group: /(- ?([^-]+(?:-[^-]+-$)?))$/,
+  group: /(- ?([^-]+(?:-={[^-]+-?$)?))$/,
   region: /R[0-9]/,
   extended: /EXTENDED/,
   hardcoded: /HC/,
