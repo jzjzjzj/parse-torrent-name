@@ -321,6 +321,7 @@ var torrents = [
   {
     name: 'WWE Monday Night Raw 2014 11 10 WS PDTV x264-RKOFAN1990 -={SPARR',
     widescreen: true,
+    quality: undefined,
     excess: ['11', '10', 'PDTV', '-RKOFAN1990']
   }
 ];
