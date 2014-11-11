@@ -6,6 +6,7 @@ Parses torrent name of a movie or TV show.
 
 - audio
 - codec
+- container
 - episode
 - episodeName
 - excess
@@ -20,6 +21,7 @@ Parses torrent name of a movie or TV show.
 - resolution
 - season
 - title
+- widescreen
 - year
 
 ## Install:
