@@ -308,6 +308,13 @@ var torrents = [
   {
     name: 'Guardians of the Galaxy (2014) Dual Audio DVDRip AVI',
     audio: 'Dual Audio',
+    container: 'AVI',
+    group: undefined,
+    excess: undefined
+  },
+  {
+    name: 'Eliza Graves (2014) Dual Audio WEB-DL 720p MKV x264',
+    container: 'MKV',
     excess: undefined
   }
 ];
