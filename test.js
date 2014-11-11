@@ -304,6 +304,11 @@ var torrents = [
     name: 'Interstellar (2014) CAM ENG x264 AAC-CPG',
     quality: 'CAM',
     excess: 'ENG'
+  },
+  {
+    name: 'Guardians of the Galaxy (2014) Dual Audio DVDRip AVI',
+    audio: 'Dual Audio',
+    excess: undefined
   }
 ];
 
