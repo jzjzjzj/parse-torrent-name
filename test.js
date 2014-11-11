@@ -16,6 +16,7 @@ var torrents = [
     group: 'ASAP[ettv]',
     extended: undefined,
     hardcoded: undefined,
+    widescreen: undefined,
     excess: undefined
   },
   {
@@ -316,6 +317,11 @@ var torrents = [
     name: 'Eliza Graves (2014) Dual Audio WEB-DL 720p MKV x264',
     container: 'MKV',
     excess: undefined
+  },
+  {
+    name: 'WWE Monday Night Raw 2014 11 10 WS PDTV x264-RKOFAN1990 -={SPARR',
+    widescreen: true,
+    excess: ['11', '10', 'PDTV', '-RKOFAN1990']
   }
 ];
 
