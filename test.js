@@ -294,7 +294,8 @@ var torrents = [
     name: 'The Shaukeens (2014) 1CD DvDScr Rip x264 [DDR]',
     quality: 'DvDScr',
     garbage: 'Rip',
-    excess: ['1CD', '[DDR]']
+    group: '[DDR]',
+    excess: '1CD'
   },
   {
     name: 'Annabelle.2014.1080p.PROPER.HC.WEBRip.x264.AAC.2.0-RARBG',

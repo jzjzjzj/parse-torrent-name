@@ -3,6 +3,9 @@
 var core = require('../core');
 
 var torrent, raw, groupRaw;
+var escapeRegex = function(string) {
+  return string.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
+};
 
 core.on('setup', function (data) {
   torrent = data;
@@ -34,7 +37,7 @@ core.on('end', function () {
   clean = clean.split(/\.\.+| +/).filter(Boolean);
 
   if(clean.length !== 0) {
-    groupPattern = clean[clean.length - 1] + groupRaw + '$';
+    groupPattern = escapeRegex(clean[clean.length - 1] + groupRaw) + '$';
 
     if(torrent.name.match(new RegExp(groupPattern))) {
       core.emit('late', {
@@ -43,8 +46,8 @@ core.on('end', function () {
       });
     }
 
-    if(torrent.map) {
-      episodeNamePattern = '{episode}' + clean[0];
+    if(torrent.map && clean[0]) {
+      episodeNamePattern = '{episode}' + escapeRegex(clean[0]);
 
       if(torrent.map.match(new RegExp(episodeNamePattern))) {
         core.emit('late', {
