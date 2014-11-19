@@ -34,7 +34,7 @@ core.on('end', function () {
 
   // clean up excess
   clean = raw.replace(/(^[-\. ]+)|([-\. ]+$)/g, '');
-  clean = clean.replace(/[\(\)\/]/g, '');
+  clean = clean.replace(/[\(\)\/]/g, ' ');
   clean = clean.split(/\.\.+| +/).filter(Boolean);
 
   if(clean.length !== 0) {
