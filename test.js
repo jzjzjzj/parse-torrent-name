@@ -325,6 +325,13 @@ var torrents = [
     quality: 'PDTV',
     group: 'RKOFAN1990 -={SPARR',
     excess: ['11', '10']
+  },
+  {
+    name: 'Sons.of.Anarchy.S01E03',
+    title: 'Sons of Anarchy',
+    season: 1,
+    episode: undefined,
+    group: 'E03'
   }
 ];
 
