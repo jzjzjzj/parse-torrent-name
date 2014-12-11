@@ -330,8 +330,8 @@ var torrents = [
     name: 'Sons.of.Anarchy.S01E03',
     title: 'Sons of Anarchy',
     season: 1,
-    episode: undefined,
-    group: 'E03'
+    episode: 3,
+    group: undefined
   }
 ];
 
