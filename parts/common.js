@@ -8,7 +8,7 @@ var core = require('../core');
  */
 var patterns = {
   season: /(S?([0-9]{1,2}))[Ex]/,
-  episode: /([Ex]([0-9]{2})[^0-9])/,
+  episode: /([Ex]([0-9]{2})([^0-9]|$))/,
   year: /([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)/,
   resolution: /[0-9]{3,4}p/,
   quality: /(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|BluRay|DvDScr/,

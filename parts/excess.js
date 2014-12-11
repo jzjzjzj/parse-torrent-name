@@ -33,7 +33,8 @@ core.on('end', function () {
   var clean, groupPattern, episodeNamePattern;
 
   // clean up excess
-  clean = raw.replace(/(^[-\. ]+)|[\(\)\/]|([-\. ]+$)/g, '');
+  clean = raw.replace(/(^[-\. ]+)|([-\. ]+$)/g, '');
+  clean = clean.replace(/[\(\)\/]/g, ' ');
   clean = clean.split(/\.\.+| +/).filter(Boolean);
 
   if(clean.length !== 0) {
