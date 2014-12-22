@@ -342,9 +342,9 @@ var torrents = [
   },
   {
     name: 'breaking.bad.s01e01.720p.bluray.x264-reward',
-    title: 'breaking bad s01e01',
-    season: undefined,
-    episode: undefined,
+    title: 'breaking bad',
+    season: 1,
+    episode: 1,
     quality: undefined,
     excess: 'bluray'
   },
