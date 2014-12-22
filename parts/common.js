@@ -7,11 +7,11 @@ var core = require('../core');
  * In case of two groups - 1st is raw, 2nd is clean.
  */
 var patterns = {
-  season: /(S?([0-9]{1,2}))[Ex]/,
-  episode: /([Ex]([0-9]{2})([^0-9]|$))/,
+  season: /([Ss]?([0-9]{1,2}))[Eex]/,
+  episode: /([Eex]([0-9]{2})([^0-9]|$))/,
   year: /([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)/,
   resolution: /[0-9]{3,4}p/,
-  quality: /(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|BluRay|DvDScr/,
+  quality: /(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|[Bb]lu[Rr]ay|DvDScr|hdtv/,
   codec: /xvid|x264|h\.?264/i,
   audio: /MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|AAC(?:\.?2\.0)?|AC3(?:\.5\.1)?/,
   group: /(- ?([^-]+(?:-={[^-]+-?$)?))$/,
@@ -69,6 +69,10 @@ core.on('start', function() {
         if(clean.match(patterns.codec) || clean.match(patterns.quality)) {
           continue;
         }
+
+        if(clean.match(/[^ ]+ [^ ]+ .+/)) {
+          key = 'episodeName';
+        }
       }
 
       part = {
@@ -94,6 +98,8 @@ core.on('late', function (part) {
     core.emit('part', part);
   }
   else if(part.name === 'episodeName') {
+    part.clean = part.clean.replace(/[\._]/g, ' ');
+    part.clean = part.clean.replace(/_+$/, '').trim();
     core.emit('part', part);
   }
 });

@@ -332,6 +332,27 @@ var torrents = [
     season: 1,
     episode: 3,
     group: undefined
+  },
+  {
+    name: 'doctor_who_2005.8x12.death_in_heaven.720p_hdtv_x264-fov',
+    title: 'doctor who',
+    episodeName: 'death in heaven',
+    quality: 'hdtv',
+    excess: undefined
+  },
+  {
+    name: 'breaking.bad.s01e01.720p.bluray.x264-reward',
+    title: 'breaking bad',
+    season: 1,
+    episode: 1,
+    quality: 'bluray',
+    excess: undefined
+  },
+  {
+    name: 'Game of Thrones - 4x03 - Breaker of Chains',
+    title: 'Game of Thrones',
+    episodeName: 'Breaker of Chains',
+    group: undefined
   }
 ];
 
