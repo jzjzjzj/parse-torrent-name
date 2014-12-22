@@ -33,7 +33,7 @@ core.on('common', function () {
   }
 
   clean = clean.replace(/_/g, ' ');
-  clean = clean.replace(/[\(_]$/, '').trim();
+  clean = clean.replace(/([\(_]|- )$/, '').trim();
 
   core.emit('part', {
     name: 'title',

@@ -350,7 +350,7 @@ var torrents = [
   },
   {
     name: 'Game of Thrones - 4x03 - Breaker of Chains',
-    title: 'Game of Thrones -',
+    title: 'Game of Thrones',
     episodeName: undefined,
     group: 'Breaker of Chains'
   }
