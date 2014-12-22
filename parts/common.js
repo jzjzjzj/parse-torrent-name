@@ -69,6 +69,10 @@ core.on('start', function() {
         if(clean.match(patterns.codec) || clean.match(patterns.quality)) {
           continue;
         }
+
+        if(clean.match(/[^ ]+ [^ ]+ .+/)) {
+          key = 'episodeName';
+        }
       }
 
       part = {
