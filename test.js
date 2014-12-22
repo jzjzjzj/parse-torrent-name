@@ -345,8 +345,8 @@ var torrents = [
     title: 'breaking bad',
     season: 1,
     episode: 1,
-    quality: undefined,
-    excess: 'bluray'
+    quality: 'bluray',
+    excess: undefined
   },
   {
     name: 'Game of Thrones - 4x03 - Breaker of Chains',
