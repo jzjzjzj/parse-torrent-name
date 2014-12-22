@@ -336,9 +336,9 @@ var torrents = [
   {
     name: 'doctor_who_2005.8x12.death_in_heaven.720p_hdtv_x264-fov',
     title: 'doctor who',
-    episodeName: undefined,
+    episodeName: 'death_in_heaven __',
     quality: 'hdtv',
-    excess: 'death_in_heaven.__'
+    excess: undefined
   },
   {
     name: 'breaking.bad.s01e01.720p.bluray.x264-reward',

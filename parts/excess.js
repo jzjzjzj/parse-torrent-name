@@ -48,7 +48,7 @@ core.on('end', function () {
     }
 
     if(torrent.map && clean[0]) {
-      episodeNamePattern = '{episode}' + escapeRegex(clean[0]);
+      episodeNamePattern = '{episode}' + escapeRegex(clean[0].replace(/_+$/, ''));
 
       if(torrent.map.match(new RegExp(episodeNamePattern))) {
         core.emit('late', {
