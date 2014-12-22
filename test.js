@@ -336,7 +336,7 @@ var torrents = [
   {
     name: 'doctor_who_2005.8x12.death_in_heaven.720p_hdtv_x264-fov',
     title: 'doctor who',
-    episodeName: 'death_in_heaven __',
+    episodeName: 'death in heaven',
     quality: 'hdtv',
     excess: undefined
   },

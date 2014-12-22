@@ -94,7 +94,8 @@ core.on('late', function (part) {
     core.emit('part', part);
   }
   else if(part.name === 'episodeName') {
-    part.clean = part.clean.replace(/\./g, ' ');
+    part.clean = part.clean.replace(/[\._]/g, ' ');
+    part.clean = part.clean.replace(/_+$/, '').trim();
     core.emit('part', part);
   }
 });
