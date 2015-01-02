@@ -358,14 +358,14 @@ var torrents = [
   {
     name: '[720pMkv.Com]_sons.of.anarchy.s05e10.480p.BluRay.x264-GAnGSteR',
     website: undefined,
-    title: '[',
+    title: '[720pMkv Com] sons of anarchy',
     season: 5,
     episode: 10,
-    resolution: '720p',
+    resolution: '480p',
     quality: 'BluRay',
     codec: 'x264',
     group: 'GAnGSteR',
-    excess: 'Mkv.Com]_sons.of.anarchy.480p'
+    excess: undefined
   },
   {
     name: '[ www.Speed.cd ] -Sons.of.Anarchy.S07E07.720p.HDTV.X264-DIMENSION',
