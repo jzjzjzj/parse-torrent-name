@@ -353,6 +353,27 @@ var torrents = [
     title: 'Game of Thrones',
     episodeName: 'Breaker of Chains',
     group: undefined
+  },
+  {
+    name: '[720pMkv.Com]_sons.of.anarchy.s05e10.480p.BluRay.x264-GAnGSteR',
+    title: '[',
+    season: 5,
+    episode: 10,
+    resolution: '720p',
+    quality: 'BluRay',
+    codec: 'x264',
+    group: 'GAnGSteR',
+    excess: 'Mkv.Com]_sons.of.anarchy.480p'
+  },
+  {
+    name: '[ www.Speed.cd ] -Sons.of.Anarchy.S07E07.720p.HDTV.X264-DIMENSION',
+    title: '[ www.Speed.cd ] -Sons.of.Anarchy.',
+    season: 7,
+    episode: 7,
+    resolution: '720p',
+    quality: 'HDTV',
+    codec: 'X264',
+    group: 'DIMENSION'
   }
 ];
 
