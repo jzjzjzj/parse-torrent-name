@@ -4,11 +4,12 @@ var core = require('../core');
 
 require('./common');
 
-var torrent, firstPart, raw;
+var torrent, start, end, raw;
 
 core.on('setup', function (data) {
   torrent = data;
-  firstPart = undefined;
+  start = 0;
+  end = undefined;
   raw = undefined;
 });
 
@@ -17,14 +18,13 @@ core.on('part', function (part) {
     return;
   }
 
-  // locate the first part
-  if(!firstPart || part.match.index < firstPart.index) {
-    firstPart = part.match;
+  if(!end || part.match.index < end) {
+    end = part.match.index;
   }
 });
 
 core.on('common', function () {
-  var raw = firstPart ? torrent.name.substr(0, firstPart.index).split('(')[0] : torrent.name;
+  var raw = end ? torrent.name.substr(start, end - start).split('(')[0] : torrent.name;
   var clean = raw;
 
   // clean up title
