@@ -17,6 +17,7 @@ var torrents = [
     extended: undefined,
     hardcoded: undefined,
     widescreen: undefined,
+    website: undefined,
     excess: undefined
   },
   {
@@ -356,6 +357,7 @@ var torrents = [
   },
   {
     name: '[720pMkv.Com]_sons.of.anarchy.s05e10.480p.BluRay.x264-GAnGSteR',
+    website: undefined,
     title: '[',
     season: 5,
     episode: 10,
@@ -367,6 +369,7 @@ var torrents = [
   },
   {
     name: '[ www.Speed.cd ] -Sons.of.Anarchy.S07E07.720p.HDTV.X264-DIMENSION',
+    website: undefined,
     title: '[ www.Speed.cd ] -Sons.of.Anarchy.',
     season: 7,
     episode: 7,
