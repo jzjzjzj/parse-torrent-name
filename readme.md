@@ -14,6 +14,7 @@ Parses torrent name of a movie or TV show.
 - garbage
 - group
 - hardcoded
+- language
 - proper
 - quality
 - region
@@ -21,6 +22,7 @@ Parses torrent name of a movie or TV show.
 - resolution
 - season
 - title
+- website
 - widescreen
 - year
 
