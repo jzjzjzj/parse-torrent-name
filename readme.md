@@ -21,6 +21,7 @@ Parses torrent name of a movie or TV show.
 - resolution
 - season
 - title
+- website
 - widescreen
 - year
 

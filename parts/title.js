@@ -18,6 +18,12 @@ core.on('part', function (part) {
     return;
   }
 
+  if(part.match.index === 0) {
+    start = part.match[0].length;
+
+    return;
+  }
+
   if(!end || part.match.index < end) {
     end = part.match.index;
   }
@@ -28,7 +34,9 @@ core.on('common', function () {
   var clean = raw;
 
   // clean up title
-  if(raw.indexOf(' ') === -1 && raw.indexOf('.') !== -1) {
+  clean = raw.replace(/^ -/, '');
+
+  if(clean.indexOf(' ') === -1 && clean.indexOf('.') !== -1) {
     clean = clean.replace(/\./g, ' ');
   }
 

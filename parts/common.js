@@ -22,6 +22,7 @@ var patterns = {
   repack: /REPACK/,
   container: /MKV|AVI/,
   widescreen: /WS/,
+  website: /^(\[ ([^\]]+) \])/,
   garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {

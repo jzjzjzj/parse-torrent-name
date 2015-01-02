@@ -369,8 +369,8 @@ var torrents = [
   },
   {
     name: '[ www.Speed.cd ] -Sons.of.Anarchy.S07E07.720p.HDTV.X264-DIMENSION',
-    website: undefined,
-    title: '[ www.Speed.cd ] -Sons.of.Anarchy.',
+    website: 'www.Speed.cd',
+    title: 'Sons of Anarchy',
     season: 7,
     episode: 7,
     resolution: '720p',
