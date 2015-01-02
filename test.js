@@ -377,6 +377,16 @@ var torrents = [
     quality: 'HDTV',
     codec: 'X264',
     group: 'DIMENSION'
+  },
+  {
+    name: 'Community.s02e20.rus.eng.720p.Kybik.v.Kybe',
+    title: 'Community',
+    season: 2,
+    episode: 20,
+    language: 'rus.eng',
+    resolution: '720p',
+    group: 'Kybik.v.Kybe',
+    episodeName: undefined
   }
 ];
 

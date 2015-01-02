@@ -23,6 +23,7 @@ var patterns = {
   container: /MKV|AVI/,
   widescreen: /WS/,
   website: /^(\[ ?([^\]]+?) ?\])/,
+  language: /rus\.eng/,
   garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {
