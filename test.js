@@ -383,9 +383,10 @@ var torrents = [
     title: 'Community',
     season: 2,
     episode: 20,
+    language: 'rus.eng',
     resolution: '720p',
     group: 'Kybik.v.Kybe',
-    episodeName: 'rus eng'
+    episodeName: undefined
   }
 ];
 
